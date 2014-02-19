@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_CodeFirst_RemovePK", "console\EF_CodeFirst_RemovePK.csproj", "{FE592145-7021-4E4B-BE09-CC7E917B4EBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_CodeFirst_Data", "data\EF_CodeFirst_Data.csproj", "{84847963-803C-4787-BB4C-6AD0D60E06E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE592145-7021-4E4B-BE09-CC7E917B4EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE592145-7021-4E4B-BE09-CC7E917B4EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE592145-7021-4E4B-BE09-CC7E917B4EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE592145-7021-4E4B-BE09-CC7E917B4EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84847963-803C-4787-BB4C-6AD0D60E06E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84847963-803C-4787-BB4C-6AD0D60E06E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84847963-803C-4787-BB4C-6AD0D60E06E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84847963-803C-4787-BB4C-6AD0D60E06E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

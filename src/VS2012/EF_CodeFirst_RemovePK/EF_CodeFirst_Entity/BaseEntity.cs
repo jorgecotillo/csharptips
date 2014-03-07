@@ -11,7 +11,7 @@ namespace EF_CodeFirst_Entity
     /// </summary>
     public abstract partial class BaseEntity
     {
-        
+
         /// <summary>
         /// Gets or sets the entity identifier
         /// </summary>
@@ -69,4 +69,5 @@ namespace EF_CodeFirst_Entity
         {
             return !(x == y);
         }
+    }
 }

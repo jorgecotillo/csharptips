@@ -28,14 +28,15 @@ namespace EF_CodeFirst_Data
         {
             //In case you want to add indexes or sprocs after the DB is created, uncomment this code.
             //Use HostingEnvironment to MapPath to a specific folder in the website.
-
+            
             //custom commands (stored proedures, indexes)
 
             //var customCommands = new List<string>();            
             //customCommands.AddRange(ParseCommands(HostingEnvironment.MapPath("~/App_Data/SqlServer.Indexes.sql"), false));            
             //customCommands.AddRange(ParseCommands(HostingEnvironment.MapPath("~/App_Data/SqlServer.StoredProcedures.sql"), false));
 
-            var initializer = new CreateTablesIfNotExist<NopObjectContext>(tablesToValidate)//, customCommands.ToArray());
+            var initializer = new CreateTablesIfNotExist<EFCustomContext>(tablesToValidate: new[] { "" }, customCommands: new[] { "" });
+
             Database.SetInitializer(initializer);
         }
 

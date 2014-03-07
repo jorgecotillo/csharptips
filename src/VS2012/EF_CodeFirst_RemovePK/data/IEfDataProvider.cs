@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity.Infrastructure;
-using Nop.Core.Data;
 
 namespace EF_CodeFirst_Data
 {

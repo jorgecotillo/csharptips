@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\EntityFramework\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +50,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\data\EF_CodeFirst_Data.csproj">
+      <Project>{84847963-803c-4787-bb4c-6ad0d60e06e8}</Project>
+      <Name>EF_CodeFirst_Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EF_CodeFirst_Entity\EF_CodeFirst_Entity.csproj">
+      <Project>{3ce0a9f1-0342-45c5-83db-0687ab561668}</Project>
+      <Name>EF_CodeFirst_Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EF_CodeFirst_Service\EF_CodeFirst_Service.csproj">
+      <Project>{5b55c306-253c-4610-9ff4-a3d9d27571ea}</Project>
+      <Name>EF_CodeFirst_Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

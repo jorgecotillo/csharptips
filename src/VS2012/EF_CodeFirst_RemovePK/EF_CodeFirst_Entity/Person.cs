@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace EF_CodeFirst_Entity
 {
-    class Person
+    public class Person : BaseEntity
     {
+        public string FirstName { get; set; }
+        public DateTime LastUpdated { get; set; }
     }
 }

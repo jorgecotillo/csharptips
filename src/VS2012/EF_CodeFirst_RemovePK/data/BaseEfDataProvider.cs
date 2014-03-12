@@ -4,7 +4,7 @@ using System.Data.Entity.Infrastructure;
 
 namespace EF_CodeFirst_Data
 {
-    public abstract class BaseEfDataProvider : IEfDataProvider
+    public abstract class BaseEFDataProvider : IEFDataProvider
     {
         /// <summary>
         /// Get connection factory

@@ -10,7 +10,7 @@ using System.Text;
 
 namespace EF_CodeFirst_Data
 {
-    public class SqlServerDataProvider : BaseEfDataProvider
+    public class SqlServerDataProvider : BaseEFDataProvider
     {
         /// <summary>
         /// Get connection factory

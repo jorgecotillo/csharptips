@@ -2,7 +2,7 @@
 
 namespace EF_CodeFirst_Data
 {
-    public interface IEfDataProvider : IDataProvider
+    public interface IEFDataProvider : IDataProvider
     {
         /// <summary>
         /// Get connection factory

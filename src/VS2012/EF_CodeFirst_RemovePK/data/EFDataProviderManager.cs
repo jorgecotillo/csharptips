@@ -5,10 +5,10 @@ namespace EF_CodeFirst_Data
 {
     public partial class EFDataProviderManager
     {
-        public IDataProvider LoadDataProvider()
+        public IDataProvider LoadDataProvider(string providerName)
         {
 
-            var providerName = ConfigurationManager.AppSettings["providerName"];
+            //var providerName = ConfigurationManager.AppSettings["providerName"];
             if (String.IsNullOrWhiteSpace(providerName))
                 throw new Exception("Data settings not provided");
           

@@ -41,6 +41,8 @@ namespace EF_CodeFirst_RemovePK
                 var dataProvider = (IEFDataProvider)dataProviderManager.LoadDataProvider(providerName);
 
                 //Creates DB Connection Factory - Depending on the SQL Server instance this factory can be: SqlCeConnectionFactory or SqlConnectionFactory 
+                //Note: I can call dataProvider.InitDatabase() but the issue is, in the case the DB already exists because InitDatabase has SetDatabaseInitializer() that will create the DB tables.
+                //      We have to set the DB Connection factory first and then depending if the DB exists or not, let the user decide if he/she wants to recreate the tables.
                 dataProvider.InitConnectionFactory();
                 
                 //Creates the EF Context based on the connection string

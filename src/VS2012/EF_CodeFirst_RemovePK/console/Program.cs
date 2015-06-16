@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace EF_CodeFirst_RemovePK
 {
     class Program
-    {        
+    {
         static int Main(string[] args)
         {
             try
@@ -44,7 +44,7 @@ namespace EF_CodeFirst_RemovePK
                 //Note: I can call dataProvider.InitDatabase() but the issue is, in the case the DB already exists because InitDatabase has SetDatabaseInitializer() that will create the DB tables.
                 //      We have to set the DB Connection factory first and then depending if the DB exists or not, let the user decide if he/she wants to recreate the tables.
                 dataProvider.InitConnectionFactory();
-                
+
                 //Creates the EF Context based on the connection string
                 EFCustomContext context = new EFCustomContext(connectionString);
 
@@ -53,7 +53,7 @@ namespace EF_CodeFirst_RemovePK
                 {
                     Console.WriteLine("Do you want to remove the existing DB? (Y/N) \nBy removing the DB you will autogenerate your new tables, if aplicable.");
                     if (Console.ReadKey(false).Key == ConsoleKey.Y)
-                    {                        
+                    {
                         context.Database.Delete();
                         dataProvider.InitDatabase();
                         context.Database.Create();
@@ -71,7 +71,11 @@ namespace EF_CodeFirst_RemovePK
                 personService.InsertPerson(new Person() { FirstName = "Jorge" });
 
                 //Select the person and display it
-                Console.WriteLine("\n\nResult from DB Query:\n\n" + personService.GetAllPersons().FirstOrDefault().FirstName);
+                Console.WriteLine("\n\nResult from DB Query:\n");
+                foreach (var person in personService.GetAllPersons())
+                {
+                    Console.WriteLine("{0,-3} {1,-20} {2}", person.Id, person.FirstName, person.LastUpdated);
+                }
                 Console.ReadLine();
                 return 1;
             }
